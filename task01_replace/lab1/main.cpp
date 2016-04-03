@@ -7,9 +7,12 @@
 
 using namespace std;
 
-bool CheckSizeFile(const string & nameFile)
+Special for Conflict
+
+bool CheckConflictFile(const string & nameFile)
 {
 	struct stat file;
+	hi im conflict;
 	stat(nameFile.c_str(), &file);
 	return (file.st_size > 0 && file.st_size < 2147483648);
 }
