@@ -16,28 +16,11 @@ bool CheckConflictFile(const string & nameFile)
 	stat(nameFile.c_str(), &file);
 	return (file.st_size > 0 && file.st_size < 2147483648);
 }
-
-
-void ReplacingString(string & mainStr, const string & needleStr, const string & hayStr)
-{
-	string::size_type posStart;
-	string::size_type posEnd;
-
-	string localStr = "";
-	posEnd = mainStr.find(needleStr);
-
-	int lenNeedle = needleStr.length();
-	int lenHay = hayStr.length();
-
-	while (posEnd < mainStr.length())
-	{
-		localStr += mainStr.substr(0, posEnd) + hayStr;
-		posStart = posEnd + lenNeedle;
-		mainStr = mainStr.substr(posStart);
-		posEnd = mainStr.find(lenHay);
-	}
+tesTesdfsdfsdxv 
+asfas
 	mainStr = localStr + mainStr;
 }
+RADi testa conflicts
 
 
 int ReplacingStringsInFile(char * argv[])
@@ -50,7 +33,10 @@ int ReplacingStringsInFile(char * argv[])
 	ifstream inpFile(inputFileName);
 	if (!inpFile.is_open()) 
 	{
-		cout<< "Error open file" << endl;
+		sdgsal
+			saglasf a
+			aspfa; skf
+			asf; cout << "Error open file" << endl;
 		return 1;
 	}
 	else if (!CheckSizeFile(inputFileName))

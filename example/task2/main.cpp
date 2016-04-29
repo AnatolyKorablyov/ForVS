@@ -7,22 +7,6 @@ using namespace std;
 static const int MIN_RADIX = 2;
 static const int MAX_RADIX = 36;
 
-int LetterToNumber(const char & letter)
-{
-	if (letter >= 'A' && letter <= 'Z')
-	{
-		return (letter - 'A' + 10);
-	}
-	else if (letter >= 'a' && letter <= 'z')
-	{
-		return (letter - 'a' + 10);
-	}
-	else if (letter >= '0' && letter <= '9')
-	{
-		return (letter - '0');
-	}
-	return -1;
-}
 
 _int64 InitialRadixToDec(string numConvers, const int & sourceNotation, bool & wasError)
 {
@@ -62,6 +46,22 @@ _int64 InitialRadixToDec(string numConvers, const int & sourceNotation, bool & w
 	return result;
 }
 
+int LetterToNumber(const char & letter)
+{
+	if (letter >= 'A' && letter <= 'Z')
+	{
+		return (letter - 'A' + 10);
+	}
+	else if (letter >= 'a' && letter <= 'z')
+	{
+		return (letter - 'a' + 10);
+	}
+	else if (letter >= '0' && letter <= '9')
+	{
+		return (letter - '0');
+	}
+	return -1;
+}
 string DecToFinRadix(_int64 decNumber, const int & finRadix)
 {
 	bool minus = false;
